@@ -108,7 +108,7 @@ public class Main {
                                 expenseamounttextfield.setText(String.valueOf(rs.getInt("expenseamount")));
                                 expensetypetextfield.setText(rs.getString("expensetype"));
                                 JButton updateButton = new JButton("Update");
-                                updateButton.setBounds(380,200,80,40);
+                                updateButton.setBounds(200,280,80,40);
                                 frame.add(updateButton);
                                 updateButton.addActionListener(new ActionListener() {
                                     @Override
@@ -128,7 +128,7 @@ public class Main {
                                     }
                                 });
                             }
-                            JOptionPane.showMessageDialog(null, "Expense Deleted Successfully");
+                            JOptionPane.showMessageDialog(null, "Expense Fetched Successfully");
                             expensetypelabel.setVisible(true);
                             expensetypetextfield.setVisible(true);
                             expenseamountlabel.setVisible(true);
