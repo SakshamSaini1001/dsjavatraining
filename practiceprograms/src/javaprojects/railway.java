@@ -2,9 +2,21 @@ package javaprojects;
 
 import javax.swing.*;
 import java.awt.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class railway {
     public static void main(String[] args) {
+        String username = "root";
+        String password = "";
+        String url = "jdbc:mysql://localhost:3306/reservationdb";
+        try {
+            Connection conn = DriverManager.getConnection(url, username, password);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println("Connected");
         JFrame frame = new JFrame();
         frame.setLayout(null);
         frame.setSize(600,700);
